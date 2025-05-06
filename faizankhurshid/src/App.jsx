@@ -12,13 +12,15 @@ import Projects from './components/Projects/Projects'
 const App = () => {
   return (
     <div>
-      <Navbar/>
-      <Hero/>
-      <About/>
-      <Skills/>
-      <Projects/>
-      <Contact/>
-      <Footer/>     
+      <Navbar />
+      <div className='body'>
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+      </div>
+      <Footer />
     </div>
   )
 }

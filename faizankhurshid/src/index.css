@@ -9,4 +9,13 @@ body {
     font-family: 'Poppins', sans-serif;
     color: #000;
     background: white;
+    background-image: url('./assets/bg.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  background-attachment: fixed;
+    height: 100vh;
+    font-family: sans-serif;
   }
+

@@ -1,13 +1,16 @@
 .projects {
-  padding: 5rem 3rem;
+  padding: 5rem 14rem;
   text-align: center;
 }
 
 .section-title {
   font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 3rem;
-  color: #000;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(270deg, #000000 0%, #555555 50%, #ffffff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .projects-list {
@@ -20,7 +23,8 @@
   display: flex;
   flex-direction: row;
   gap: 2rem;
-  background-color: #00000013;
+  background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(6px);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);

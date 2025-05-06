@@ -1,6 +1,7 @@
 .about {
     padding: 2rem 3rem;
     color: #000;
+
   }
   
   .about-container {
@@ -11,8 +12,12 @@
   
   .about-title {
     font-size: 2.5rem;
-    font-weight: bold;
+    font-weight: 900;
     margin-bottom: 0.5rem;
+    background: linear-gradient(270deg, #000000 0%, #555555 50%, #ffffff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   
   .about-subtitle {
