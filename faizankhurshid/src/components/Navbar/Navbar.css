@@ -74,6 +74,7 @@
   transition: all 0.3s ease;
   font-weight: 500;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+  margin-right: 10px;
 }
 
 .contact-button:hover {
@@ -148,7 +149,7 @@
 }
 
 /* Tablets (768px to 1024px) */
-@media (min-width: 768px) and (max-width: 1130px) {
+@media (min-width: 768px) and (max-width: 1px) {
   .navbar-container {
     padding: 0 1.5rem;
   }
