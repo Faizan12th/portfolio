@@ -1,6 +1,6 @@
 import React from 'react';
 import './Projects.css';
-import image from '../../assets/project-image.png'
+import image from '../../assets/project-image.jpg'
 import { FaHtml5, FaCss3Alt, FaJs, FaReact } from 'react-icons/fa';
 
 const projects = [
