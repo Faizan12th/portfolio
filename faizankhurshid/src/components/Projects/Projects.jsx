@@ -5,7 +5,7 @@ import { FaHtml5, FaCss3Alt, FaJs, FaReact } from 'react-icons/fa';
 
 const projects = [
   {
-    title: 'Spotify Clone',
+    title: 'Spotif Clone',
     description: 'A fully responsive music streaming clone built with HTML, CSS, and JavaScript. A fully responsive music streaming clone built with HTML, CSS, and JavaScript. A fully responsive music streaming clone built with HTML, CSS, and JavaScript. A fully responsive music streaming clone built with HTML, CSS, and JavaScript.A fully responsive music streaming clone built with HTML, CSS, and JavaScript.',
     image: '/images/spotify-clone.png',
     link: 'https://your-spotify-clone-live-link.com',
