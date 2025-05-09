@@ -1,16 +1,17 @@
 .projects {
-  padding: 5rem 14rem;
+  padding: 2rem 1rem;
   text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  border-radius: 15px;
+  margin: 0 1rem 70px;
 }
 
 .section-title {
   font-size: 2.5rem;
-    font-weight: 900;
-    margin-bottom: 0.5rem;
-    background: linear-gradient(270deg, #000000 0%, #555555 50%, #ffffff 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  color: white;
 }
 
 .projects-list {
@@ -23,28 +24,32 @@
   display: flex;
   flex-direction: row;
   gap: 2rem;
-  background: rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(6px);
+  border: 1px solid white;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
   transition: transform 0.3s ease;
   text-decoration: none;
-  color: inherit;
+  color: white;
   padding: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .project-card:hover {
   transform: scale(1.02);
+  box-shadow: 0 0 15px 2px rgba(255, 255, 255, 0.607);
+  transition: 0.5s;
 }
 
 .project-image {
   flex: 1;
+  min-width: 250px;
+  max-width: 500px;
 }
 
 .project-image img {
   border-radius: 10px;
-  border: 6px solid rgba(0, 0, 0, 0.473);
+  border: 6px solid white;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -59,39 +64,90 @@
 .project-info h3 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
-  color: #111;
+  color: white;
 }
 
 .project-info p {
   font-size: 1rem;
-  color: #555;
+  color: white;
   margin-bottom: 1rem;
 }
 
 .tech-stack {
   display: flex;
-  gap: 1rem;
-  font-size: 1.5rem;
+  gap: 0.5rem;
+  font-size: 1rem;
   color: #333;
+  flex-wrap: wrap;
 }
 
 .tech-icon {
+  padding: 10px;
+  color: white;
   display: flex;
   align-items: center;
+  border-radius: 50%;
+  border: 1px solid white;
 }
 
-/* Responsive for smaller screens */
+.tech-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px 2px rgba(255, 255, 255, 0.607);
+  transition: 0.4s;
+}
+
+/* Medium Devices */
+@media (max-width: 992px) {
+  .project-info h3 {
+    font-size: 1.6rem;
+  }
+
+  .project-info {
+    padding: 1.5rem;
+  }
+
+  .project-image {
+    max-width: 100%;
+  }
+}
+
+/* Tablets */
 @media (max-width: 768px) {
   .project-card {
     flex-direction: column;
+    align-items: center;
   }
 
   .project-info {
     text-align: center;
-    padding: 1.5rem;
+    padding: 1.5rem 1rem;
   }
 
   .tech-stack {
     justify-content: center;
+  }
+}
+
+/* Small Devices */
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .project-info h3 {
+    font-size: 1.4rem;
+  }
+
+  .project-info p {
+    font-size: 0.9rem;
+  }
+
+  .project-card {
+    padding: 1rem;
+  }
+
+  .tech-icon {
+    font-size: 0.9rem;
+    padding: 8px;
   }
 }

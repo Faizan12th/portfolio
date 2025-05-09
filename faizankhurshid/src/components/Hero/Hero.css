@@ -1,159 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Pacifico&family=Sacramento&display=swap');
+
 .hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2.5rem 9rem 5rem;
-    min-height: 60vh;
-    gap: 2rem;
-    flex-wrap: wrap;
-    margin: 115px 50px 0;
-  }
-  
-  .hero-left {
-    flex: 1;
-    max-width: 600px;
-    z-index: 2;
-  }
-  
-  .hero-title {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: #000;
-    font-family: Sacramento;
-    font-weight: 900;
-  }
-  
-  .hero-title span {
-    color: #000;
-  }
-  
-  .hero-subtitle {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #333;
-    margin-bottom: 2rem;
-    margin: 1rem 0;
-  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 4rem;
+  min-height: 60vh;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 120px 160px 75px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  border-radius: 15px;
+}
+
+.hero-left {
+  flex: 1;
+  max-width: 600px;
+  z-index: 2;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  color: #fff;
+  font-family: Pacifico;
+  font-weight: 900;
+}
+
+.hero-title span {}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #fff;
+  margin-bottom: 2rem;
+  margin: 1rem 0;
   font-weight: 500;
   min-height: 40px;
-  }
-  
-  .hero-buttons {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-  
-  .hero-btn {
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-weight: 500;
-    border: none;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
-  }
-  
-  .hero-btn.primary {
-    background-color: #000;
-    color: #fff;
-  }
-  
-  .hero-btn.primary:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-  }
-  
-  .hero-btn.secondary {
-    background: white;
-    color: #000;
-    border: 2px solid black;
-  }
-  
-  .hero-btn.secondary:hover {
-    transform: scale(1.05);
-    background-color: #000;
-    color: #fff;
-  }
-  
-  /* Right Image Section */
-  .hero-right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 40px;
-  }
-  
-  .image-container {
-    width: 100%;
-    max-width: 400px;
-    aspect-ratio: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    backdrop-filter: blur(6px);
-    background: rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-    overflow: hidden;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-  animation: skillPulse 2s ease-in-out infinite alternate;
-  }
-  
-  .hero-image {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    z-index: 2;
-  }
-  
-  /* Utility class to hide on mobile */
-  .hide-on-mobile {
-    display: block;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-btn {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  border: none;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+.hero-btn.primary {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid white;
+}
+
+.hero-btn.primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px 2px rgba(255, 255, 255, 0.607);
+  transition: 0.5s;
+}
+
+.hero-btn.secondary {
+  background: white;
+  color: #000;
+  border: 2px solid white;
+}
+
+.hero-btn.secondary:hover {
+  transform: scale(1.05);
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid white;
+  box-shadow: 0 0 15px 2px rgba(255, 255, 255, 0.607);
+  transition: 0.5s;
+}
+
+/* Right Image Section */
+.hero-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 40px;
+}
+
+.image-container {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(6px);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+.image-container:hover{
+  transform: scale(1.05);
+  /* background-color: rgba(255, 255, 255, 0.365); */
+  box-shadow: 0 0 15px 2px rgba(255, 255, 255, 0.607);
+  transition: 0.5s;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  z-index: 2;
+}
+
+/* Utility class to hide on mobile */
+.hide-on-mobile {
+  display: block;
+}
+
+@keyframes skillPulse {
+  0% {
+    background-color: rgba(0, 0, 0, 0.10);
   }
 
-  @keyframes skillPulse {
-    0% {
-      background-color: rgba(0, 0, 0, 0.10);
-    }
-    100% {
-      background-color: rgba(0, 0, 0, 0.25);
-    }
+  100% {
+    background-color: rgba(0, 0, 0, 0.25);
   }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .hero {
-      flex-direction: column;
-      padding: 4rem 2rem 2rem;
-      text-align: center;
-      min-height: 40vh;
-    }
-  
-    .hero-left {
-      width: 100%;
-    }
-  
-    .hero-title {
-      font-size: 2.2rem;
-    }
-  
-    .hero-subtitle {
-      font-size: 1rem;
-    }
-  
-    .hero-buttons {
-      justify-content: center;
-    }
-  
-    .image-container {
-      margin-top: 2rem;
-    }
-  
-    .hide-on-mobile {
-      display: none;
-    }
+}
+
+@media (max-width: 1024px){
+  .hero{
+    margin: 110px 80px 75px;
+    padding-left: 2rem;
+    padding-right: 1rem;
   }
-  
+
+  .image-container{
+    max-width: 300px;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 7rem 2rem;
+    text-align: center;
+    min-height: 40vh;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .hero-left {
+    width: 100%;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .image-container {
+    margin-top: 2rem;
+  }
+
+  .hide-on-mobile {
+    display: none;
+  }
+}

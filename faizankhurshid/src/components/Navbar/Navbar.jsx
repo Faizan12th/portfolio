@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <div className="logo">Faizan</div>
+
 
         {/* Nav Links */}
         <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
