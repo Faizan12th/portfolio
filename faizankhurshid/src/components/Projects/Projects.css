@@ -98,6 +98,9 @@
 
 /* Medium Devices */
 @media (max-width: 992px) {
+  .projects{
+    margin: 0 2rem 60px;
+  }
   .project-info h3 {
     font-size: 1.6rem;
   }

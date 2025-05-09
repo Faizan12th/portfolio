@@ -95,6 +95,10 @@
     font-size: 1.7rem;
   }
 
+  .skills-grid{
+    gap: 1.4rem 0.5rem;
+  }
+
   .skills-subtitle {
     font-size: 0.95rem;
   }

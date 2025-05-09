@@ -85,12 +85,16 @@
 
 /* Medium Screens */
 @media (max-width: 992px) {
+  .about{
+    margin: 110px 80px 75px;
+  }
   .about-title {
     font-size: 1.8rem;
   }
 
   .about-box {
     flex: 1 1 45%;
+    max-width: 160px;
   }
 }
 
