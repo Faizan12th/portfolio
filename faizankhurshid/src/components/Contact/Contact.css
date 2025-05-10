@@ -8,6 +8,10 @@
   max-width: 1200px;
 }
 
+#contact{
+  scroll-margin-top: 80px;
+}
+
 .contact-title {
   font-size: 2.5rem;
   font-weight: 900;

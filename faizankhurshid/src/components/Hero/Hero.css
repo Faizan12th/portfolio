@@ -8,10 +8,14 @@
   min-height: 60vh;
   gap: 2rem;
   flex-wrap: wrap;
-  margin: 120px 160px 75px;
+  margin: 90px 160px 75px;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(6px);
   border-radius: 15px;
+}
+
+#home{
+  scroll-margin-top: 80px;
 }
 
 .hero-left {

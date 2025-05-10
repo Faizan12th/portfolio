@@ -5,7 +5,7 @@ import { TypeAnimation } from 'react-type-animation';
 
 const Hero = () => {
   return (
-    <section className="hero">
+    <section className="hero" id='home'>
       <div className="hero-left">
         <h1 className="hero-title">
           Hi, I am <span>Faizan</span>

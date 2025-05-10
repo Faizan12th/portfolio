@@ -7,6 +7,10 @@
   margin: 120px 160px 75px;
 }
 
+#skills{
+  scroll-margin-top: 80px;
+}
+
 .skills-title {
   color: white;
   font-size: 2.1rem;

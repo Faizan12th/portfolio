@@ -7,6 +7,10 @@
   margin: 120px 160px 75px;
 }
 
+#projects{
+  scroll-margin-top: 80px;
+}
+
 .section-title {
   font-size: 2.5rem;
   font-weight: 900;
