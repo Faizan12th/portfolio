@@ -134,6 +134,11 @@
 
 /* Small Devices */
 @media (max-width: 480px) {
+
+  .projects{
+    margin: 0 0.5rem 60px;
+  }
+
   .section-title {
     font-size: 2rem;
   }
@@ -142,16 +147,25 @@
     font-size: 1.4rem;
   }
 
+  .project-info{
+    padding: 0.5rem 1rem;
+  }
+
   .project-info p {
-    font-size: 0.9rem;
+    font-size: 12px;
   }
 
   .project-card {
-    padding: 1rem;
+    padding: 0.5rem;
+    gap: 0;
   }
 
   .tech-icon {
     font-size: 0.9rem;
     padding: 8px;
+  }
+
+  .project-image img{
+    width: 90%;
   }
 }
