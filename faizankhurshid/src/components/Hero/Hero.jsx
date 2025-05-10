@@ -4,6 +4,15 @@ import faizanImage from './faizan14.png';
 import { TypeAnimation } from 'react-type-animation';
 
 const Hero = () => {
+
+  const handleScrollTo = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      closeMenu(); // Close mobile menu after click
+    }
+  };
+
   return (
     <section className="hero" id='home'>
       <div className="hero-left">
@@ -26,7 +35,7 @@ const Hero = () => {
         </div>
 
         <div className="hero-buttons">
-          <button className="hero-btn primary">Connect with Me</button>
+          <button className="hero-btn primary" onClick={()=>handleScrollTo('contact')}>Connect with Me</button>
           <button className="hero-btn secondary">My Resume</button>
         </div>
       </div>

@@ -40,7 +40,7 @@ const Navbar = () => {
         </ul>
 
         {/* Desktop Button */}
-        <button className="contact-button">Contact with me</button>
+        <button className="contact-button" onClick={()=>handleScrollTo('contact')}>Contact with me</button>
 
         {/* Mobile Menu Icon */}
         <div className="menu-icon" onClick={toggleMenu}>
