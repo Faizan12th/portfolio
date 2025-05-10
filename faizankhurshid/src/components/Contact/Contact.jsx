@@ -24,6 +24,8 @@ const Contact = () => {
 
     if (res.success) {
       alert(res.message)
+    }else{
+      alert(res.message)
     }
   };
 
@@ -56,9 +58,9 @@ const Contact = () => {
         {/* Right Side - Contact Form */}
         <form onSubmit={onSubmit} className="contact-form glassy">
           <h3>Send a Message</h3>
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email" required />
-          <textarea placeholder="Your Message" required></textarea>
+          <input type="text" placeholder="Your Name" name='name' required />
+          <input type="email" placeholder="Your Email" name='email' required />
+          <textarea placeholder="Your Message" name='message' required></textarea>
           <button type="submit">Send</button>
         </form>
       </div>
