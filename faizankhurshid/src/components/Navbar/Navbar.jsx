@@ -1,12 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './Navbar.css';
 import { FiMenu, FiX } from 'react-icons/fi';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const [menu, setMenu] = useState('home');
+  const menuRef = useRef();
+
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const closeMenu = () => setMenuOpen(false);
+
+  const handleScrollTo = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      closeMenu(); // Close mobile menu after click
+    }
+  };
 
   return (
     <nav className="navbar">
@@ -20,11 +32,11 @@ const Navbar = () => {
             <FiX />
           </li>
 
-          <li><a href="#home" onClick={closeMenu}>Home</a></li>
-          <li><a href="#about" onClick={closeMenu}>About</a></li>
-          <li><a href="#skills" onClick={closeMenu}>Skills</a></li>
-          <li><a href="#projects" onClick={closeMenu}>Projects</a></li>
-          <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
+          <li><a href="#home" onClick={()=>handleScrollTo('home')}>Home</a></li>
+          <li><a href="#about" onClick={()=>handleScrollTo('about')}>About</a></li>
+          <li><AnchorLink href="#skills" onClick={()=>handleScrollTo('skills')}>Skills</AnchorLink></li>
+          <li><a href="#projects" onClick={()=>handleScrollTo('projects')}>Projects</a></li>
+          <li><a href="#contact" onClick={()=>handleScrollTo('contact')}>Contact</a></li>
         </ul>
 
         {/* Desktop Button */}

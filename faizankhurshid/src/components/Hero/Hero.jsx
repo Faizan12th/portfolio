@@ -1,6 +1,6 @@
 import React from 'react';
 import './Hero.css';
-import faizanImage from './faizan.png';
+import faizanImage from './faizan14.png';
 import { TypeAnimation } from 'react-type-animation';
 
 const Hero = () => {
