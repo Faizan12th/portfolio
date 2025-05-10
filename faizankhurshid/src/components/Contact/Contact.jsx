@@ -3,6 +3,30 @@ import './Contact.css';
 import { FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const Contact = () => {
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "e374d7e8-bb83-48b0-b90c-88ffc02723f0");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: json
+    }).then((res) => res.json());
+
+    if (res.success) {
+      alert(res.message)
+    }
+  };
+
   return (
     <section className="contact-section" id="contact">
       <h2 className="contact-title">Contact Me</h2>
@@ -30,7 +54,7 @@ const Contact = () => {
         </div>
 
         {/* Right Side - Contact Form */}
-        <form className="contact-form glassy">
+        <form onSubmit={onSubmit} className="contact-form glassy">
           <h3>Send a Message</h3>
           <input type="text" placeholder="Your Name" required />
           <input type="email" placeholder="Your Email" required />

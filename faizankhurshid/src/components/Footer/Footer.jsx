@@ -19,8 +19,8 @@ const Footer = () => {
           <a href="https://github.com/faizan" target="_blank" rel="noreferrer"><FaGithub /></a>
           <a href="https://linkedin.com/in/faizan" target="_blank" rel="noreferrer"><FaLinkedin /></a>
         </div>
-      </div>
       <p className="footer-bottom">&copy; {new Date().getFullYear()} Faizan. All rights reserved.</p>
+      </div>
     </footer>
   );
 };
