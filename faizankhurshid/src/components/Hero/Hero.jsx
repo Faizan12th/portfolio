@@ -1,6 +1,7 @@
 import React from 'react';
 import './Hero.css';
 import faizanImage from '../../assets/faizan14.png';
+import resume from '../../assets/cv-faizan-khurshid.pdf';
 import { TypeAnimation } from 'react-type-animation';
 
 const Hero = () => {
@@ -36,7 +37,7 @@ const Hero = () => {
 
         <div className="hero-buttons">
           <button className="hero-btn primary" onClick={()=>handleScrollTo('contact')}>Connect with Me</button>
-          <button className="hero-btn secondary">My Resume</button>
+          <button onClick={()=>{window.open(resume,'_blank')}} className="hero-btn secondary">My Resume</button>
         </div>
       </div>
 
