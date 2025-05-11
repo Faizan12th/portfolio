@@ -1,7 +1,7 @@
 import React from 'react';
 import './Hero.css';
 import faizanImage from '../../assets/faizan14.png';
-import resume from '../../assets/cv-faizan-khurshid.pdf';
+import resume from '../../assets/cv-Faizan-Khurshid.pdf';
 import { TypeAnimation } from 'react-type-animation';
 
 const Hero = () => {
