@@ -38,18 +38,18 @@ const Contact = () => {
           <h3>Let's Connect</h3>
           <ul>
             <li>
-              <a href="mailto:faizan@example.com" target="_blank" rel="noopener noreferrer">
-                <FaEnvelope className="icon" /> faizan@example.com
+              <a href="mailto:faizankhurshid83@gmail.com" target="_blank" rel="noopener noreferrer">
+                <FaEnvelope className="icon" /> faizankhurshid83@gmail.com
               </a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/faizan" target="_blank" rel="noopener noreferrer">
-                <FaLinkedin className="icon" /> linkedin.com/in/faizan
+              <a href="https://www.linkedin.com/in/faizan-khurshid-a99632298" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin className="icon" /> linkedin.com/in/faizan-khurshid
               </a>
             </li>
             <li>
-              <a href="https://github.com/faizan" target="_blank" rel="noopener noreferrer">
-                <FaGithub className="icon" /> github.com/faizan
+              <a href="https://github.com/Faizan12th" target="_blank" rel="noopener noreferrer">
+                <FaGithub className="icon" /> github.com/Faizan12th
               </a>
             </li>
           </ul>

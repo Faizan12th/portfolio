@@ -14,9 +14,9 @@ const Footer = () => {
           <li><a href="#contact">Contact</a></li>
         </ul>
         <div className="footer-icons">
-          <a href="mailto:faizan@example.com" target="_blank" rel="noreferrer"><FaEnvelope /></a>
-          <a href="https://github.com/faizan" target="_blank" rel="noreferrer"><FaGithub /></a>
-          <a href="https://linkedin.com/in/faizan" target="_blank" rel="noreferrer"><FaLinkedin /></a>
+          <a href="mailto:faizankhurshid83@gmail.com" target="_blank" rel="noreferrer"><FaEnvelope /></a>
+          <a href="https://github.com/Faizan12th" target="_blank" rel="noreferrer"><FaGithub /></a>
+          <a href="https://www.linkedin.com/in/faizan-khurshid-a99632298" target="_blank" rel="noreferrer"><FaLinkedin /></a>
         </div>
       <p className="footer-bottom">&copy; {new Date().getFullYear()} Faizan. All rights reserved.</p>
       </div>
