@@ -16,7 +16,7 @@ const Footer = () => {
         <div className="footer-icons">
           <a href="mailto:faizankhurshid83@gmail.com" target="_blank" rel="noreferrer"><FaEnvelope /></a>
           <a href="https://github.com/Faizan12th" target="_blank" rel="noreferrer"><FaGithub /></a>
-          <a href="https://www.linkedin.com/in/faizan-khurshid-a99632298" target="_blank" rel="noreferrer"><FaLinkedin /></a>
+          <a  href="https://www.linkedin.com/in/faizan-khurshid-a99632298" target="_blank" rel="noreferrer"><FaLinkedin /></a>
         </div>
       <p className="footer-bottom">&copy; {new Date().getFullYear()} Faizan. All rights reserved.</p>
       </div>
