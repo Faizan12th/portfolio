@@ -2,18 +2,9 @@ import React from 'react';
 import './Projects.css';
 import recruitech from '../../assets/recruitech.png'
 import assertiveattire from '../../assets/assertiveattire.png'
-import lawyerup from '../../assets/lawyerup.png'
 import { FiExternalLink, FiGithub } from 'react-icons/fi';
 
 const projects = [
-  {
-    title: 'LawyerUP – Legal Services Marketplace (FYP)',
-    description: 'Engineering an AI Assistant using a fine-tuned Mistral 7B model to automate legal drafting and predict case outcomes. Designed a microservices architecture to separate AI inference from core business logic, featuring role-specific portals.',
-    image: lawyerup,
-    link: '#',
-    githubLink: 'https://github.com/Faizan12th',
-    techStack: ['Next.js', 'FastAPI', 'MongoDB', 'Mistral 7B', 'Node.js'],
-  },
   {
     title: 'Assertive Attire – Full-Stack E-Commerce',
     description: 'Integrated Stripe API for secure financial transactions and Cloudinary for high-performance image hosting. Built a custom Admin Dashboard for real-time inventory tracking and order management.',
