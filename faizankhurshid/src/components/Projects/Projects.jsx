@@ -2,53 +2,79 @@ import React from 'react';
 import './Projects.css';
 import recruitech from '../../assets/recruitech.png'
 import assertiveattire from '../../assets/assertiveattire.png'
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs} from 'react-icons/fa';
-import { SiMongodb, SiExpress } from 'react-icons/si';
+import lawyerup from '../../assets/lawyerup.png'
+import { FiExternalLink, FiGithub } from 'react-icons/fi';
 
 const projects = [
   {
-    title: 'Assertive Attire',
-    description: 'Assertive Attire is a modern e-commerce clothing store where users can browse products, add items to their cart, and place orders securely. It includes complete cart and order management, user authentication, and admin functionality. Stripe integration ensures secure and smooth payment processing. The site offers a clean UI, real-time updates, and responsive design for seamless shopping across devices. Built with the MERN stack, it leverages MongoDB for data storage, Express and Node.js for backend services, and React for a dynamic frontend.',
-    image: assertiveattire,
-    link: 'https://assertiveattire.vercel.app',
-    techStack: [ <SiMongodb />,<SiExpress/>,<FaReact />, <FaNodeJs />],
+    title: 'LawyerUP – Legal Services Marketplace (FYP)',
+    description: 'Engineering an AI Assistant using a fine-tuned Mistral 7B model to automate legal drafting and predict case outcomes. Designed a microservices architecture to separate AI inference from core business logic, featuring role-specific portals.',
+    image: lawyerup,
+    link: '#',
+    githubLink: 'https://github.com/Faizan12th',
+    techStack: ['Next.js', 'FastAPI', 'MongoDB', 'Mistral 7B', 'Node.js'],
   },
   {
-    title: 'Recruitech',
-    description: 'Recruitech is a full-featured job portal that connects job seekers and recruiters through a seamless interface. Users can register, create profiles, upload resumes, and apply for jobs with ease. Recruiters can post job listings, manage applicants, and review candidate details through an intuitive dashboard. The platform includes role-based authentication, form validation, and responsive layouts. Powered by the MERN stack, it combines MongoDB, Express, React, and Node.js to deliver a robust, scalable, and user-friendly recruitment solution.',
+    title: 'Assertive Attire – Full-Stack E-Commerce',
+    description: 'Integrated Stripe API for secure financial transactions and Cloudinary for high-performance image hosting. Built a custom Admin Dashboard for real-time inventory tracking and order management.',
+    image: assertiveattire,
+    link: 'https://assertiveattire.vercel.app',
+    githubLink: 'https://github.com/Faizan12th',
+    techStack: ['MERN', 'Stripe', 'Cloudinary', 'Tailwind CSS'],
+  },
+  {
+    title: 'Recruitech – Job Portal',
+    description: 'Implemented Role-Based Access Control (RBAC) to differentiate between Recruiter and Applicant workflows. Integrated Sentry for real-time backend error tracking and performance monitoring.',
     image: recruitech,
     link: 'https://recruitech-amber.vercel.app',
-    techStack: [ <SiMongodb />,<SiExpress/>,<FaReact />, <FaNodeJs />],
+    githubLink: 'https://github.com/Faizan12th',
+    techStack: ['React', 'Node.js', 'Clerk Auth', 'Sentry'],
   }
 ];
 
 const Projects = () => {
   return (
     <section className="projects" id="projects">
-      <h2 className="section-title">Projects</h2>
-      <div className="projects-list">
-        {projects.map((project, index) => (
-          <a
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="project-card"
-            key={index}
-          >
-            <div className="project-image">
-              <img src={project.image} alt={project.title} />
-            </div>
-            <div className="project-info">
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-              <div className="tech-stack">
-                {project.techStack.map((icon, idx) => (
-                  <span key={idx} className="tech-icon">{icon}</span>
-                ))}
+      <div className="container">
+
+        <div className="section-header">
+          <h2 className="section-title">Featured Projects</h2>
+          <p className="section-subtitle">Showcase of recent work combining design, performance, and cutting-edge technology</p>
+        </div>
+
+        <div className="projects-grid">
+          {projects.map((project, index) => (
+            <div className="project-card" key={index}>
+
+              <div className="project-image-wrapper">
+                <div className="project-image-bg">
+                  <img src={project.image} alt={project.title} className="project-image" />
+                </div>
               </div>
+
+              <div className="project-info">
+                <h3 className="project-title">{project.title}</h3>
+                <p className="project-description">{project.description}</p>
+
+                <div className="project-tags">
+                  {project.techStack.map((tech, idx) => (
+                    <span key={idx} className="project-tag">{tech}</span>
+                  ))}
+                </div>
+
+                <div className="project-actions">
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn btn-primary project-btn">
+                    <FiExternalLink /> View Live
+                  </a>
+                  <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="btn btn-outline project-btn">
+                    <FiGithub /> Code
+                  </a>
+                </div>
+              </div>
+
             </div>
-          </a>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

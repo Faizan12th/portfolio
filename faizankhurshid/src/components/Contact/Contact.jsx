@@ -1,6 +1,7 @@
 import React from 'react';
 import './Contact.css';
-import { FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaLinkedinIn, FaGithub, FaRegEnvelope } from 'react-icons/fa';
+import { FiSend } from 'react-icons/fi';
 
 const Contact = () => {
 
@@ -24,45 +25,69 @@ const Contact = () => {
 
     if (res.success) {
       alert(res.message)
-    }else{
+    } else {
       alert(res.message)
     }
+
+    event.target.reset();
   };
 
   return (
-    <section className="contact-section" id="contact">
-      <h2 className="contact-title">Contact Me</h2>
-      <div className="contact-container">
-        {/* Left Side - Contact Info */}
-        <div className="contact-info glassy">
-          <h3>Let's Connect</h3>
-          <ul>
-            <li>
-              <a href="mailto:faizankhurshid83@gmail.com" target="_blank" rel="noopener noreferrer">
-                <FaEnvelope className="icon" /> faizankhurshid83@gmail.com
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/faizan-khurshid-a99632298" target="_blank" rel="noopener noreferrer">
-                <FaLinkedin className="icon" /> linkedin.com/in/faizan-khurshid
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/Faizan12th" target="_blank" rel="noopener noreferrer">
-                <FaGithub className="icon" /> github.com/Faizan12th
-              </a>
-            </li>
-          </ul>
+    <section className="contact" id="contact">
+      <div className="container">
+
+        <div className="section-header">
+          <h2 className="section-title">Get In Touch</h2>
+          <p className="section-subtitle">Have an exciting project? Let's collaborate and create something amazing</p>
         </div>
 
-        {/* Right Side - Contact Form */}
-        <form onSubmit={onSubmit} className="contact-form glassy">
-          <h3>Send a Message</h3>
-          <input type="text" placeholder="Your Name" name='name' required />
-          <input type="email" placeholder="Your Email" name='email' required />
-          <textarea placeholder="Your Message" name='message' required></textarea>
-          <button type="submit">Send</button>
-        </form>
+        <div className="contact-grid">
+
+          {/* Left Side - Contact Form */}
+          <div className="contact-form-wrapper">
+            <form onSubmit={onSubmit} className="contact-form">
+              <div className="form-group">
+                <label>Full Name</label>
+                <input type="text" placeholder="Your name" name='name' required />
+              </div>
+              <div className="form-group">
+                <label>Email Address</label>
+                <input type="email" placeholder="your@email.com" name='email' required />
+              </div>
+              <div className="form-group">
+                <label>Message</label>
+                <textarea placeholder="Tell me about your project..." name='message' required rows="5"></textarea>
+              </div>
+              <button type="submit" className="btn btn-primary submit-btn">
+                <FiSend /> Send Message
+              </button>
+            </form>
+          </div>
+
+          {/* Right Side - Connect */}
+          <div className="contact-info-wrapper">
+            <h3 className="connect-title">Connect With Me</h3>
+            <p className="connect-text">
+              I'm available on multiple platforms. Reach out via email or connect on social media. I'd love to hear from you.
+            </p>
+
+            <div className="social-links-grid">
+              <a href="https://github.com/Faizan12th" target="_blank" rel="noopener noreferrer" className="social-card">
+                <div className="social-icon text-teal"><FaGithub /></div>
+                <span className="social-name">GitHub</span>
+              </a>
+              <a href="https://www.linkedin.com/in/faizan-khurshid-a99632298" target="_blank" rel="noopener noreferrer" className="social-card">
+                <div className="social-icon text-teal"><FaLinkedinIn /></div>
+                <span className="social-name">LinkedIn</span>
+              </a>
+              <a href="mailto:faizankhurshid83@gmail.com" className="social-card">
+                <div className="social-icon text-teal"><FaRegEnvelope /></div>
+                <span className="social-name">Email</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
   );

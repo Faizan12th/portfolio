@@ -1,42 +1,52 @@
 import React from 'react';
 import './About.css';
+import { FaReact, FaNodeJs, FaPython, FaFigma } from 'react-icons/fa';
+import { SiTailwindcss, SiMongodb } from 'react-icons/si';
+
+const coreSkills = [
+  { name: 'React.js / Next.js', icon: <FaReact /> },
+  { name: 'Node.js / Express', icon: <FaNodeJs /> },
+  { name: 'Python / FastAPI', icon: <FaPython /> },
+  { name: 'MongoDB', icon: <SiMongodb /> },
+  { name: 'Tailwind CSS', icon: <SiTailwindcss /> },
+  { name: 'OAuth2 / Security', icon: <span className="text-teal font-bold">&lt;/&gt;</span> },
+  { name: 'REST / OpenAPI', icon: <span className="text-teal font-bold">&lt;/&gt;</span> },
+  { name: 'UI/UX Design', icon: <FaFigma /> },
+];
 
 const About = () => {
   return (
     <section className="about" id="about">
-      <div className="about-container">
-        <h2 className="about-title">About Me</h2>
+      <div className="container">
+        <h2 className="section-title">About Me</h2>
 
-        <div className="about-content">
-          <div className="about-text">
+        <div className="about-grid">
+          <div className="about-text-content">
             <p>
-              Hey there! I’m <strong>Faizan</strong>, a passionate and dedicated Software Engineer who thrives on creating clean, user-centric web applications. I specialize in the <strong>MERN stack</strong>, coupled with an eye for <strong>UI/UX design</strong> that ensures an intuitive user experience. I’m driven by a love for both the logic of code and the art of design, making sure that every project I work on feels as good to use as it is to build.
+              Hey there! I’m a passionate Software Engineering student at COMSATS University with a strong academic background, maintaining a 3.74 CGPA. I specialize in full-stack web development and am constantly expanding my expertise in AI integrations and system security.
             </p>
             <p>
-              With my strong foundation in software development and design, I aim to create scalable solutions that blend form and function. When I’m not coding, you’ll probably find me keeping up with the latest in design trends, creating wireframes, or experimenting with new technologies to optimize my workflow.
+              I recently completed a comprehensive internship at the Securities and Exchange Commission of Pakistan (SECP), which solidified my understanding of enterprise secure authentication, Single Sign-On protocols, and optimal API management. I enjoy blending logic and UI/UX design together to forge seamless digital experiences.
             </p>
             <p>
-              If you're looking for someone to transform your ideas into elegant, seamless digital experiences, let's connect and create something incredible together!
+              When I'm not coding, you'll find me exploring modern technologies, from utilizing Mistral 7B for automation features to building responsive eCommerce dashboards. If you have an exciting project or role in mind, let's connect!
             </p>
           </div>
-        </div>
 
-        <div className="about-boxes">
-          <div className="about-box">
-            <h3>3+ Years</h3>
-            <p>Experience</p>
-          </div>
-          <div className="about-box">
-            <h3>25+</h3>
-            <p>Projects</p>
-          </div>
-          <div className="about-box">
-            <h3>100%</h3>
-            <p>Client Satisfaction</p>
+          <div className="about-skills-content">
+            <h3 className="expertise-title">Core Expertise</h3>
+            <div className="expertise-grid">
+              {coreSkills.map((skill, index) => (
+                <div key={index} className="expertise-badge">
+                  <span className="expertise-icon">{skill.icon}</span>
+                  {skill.name}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
-    </section >
+    </section>
   );
 };
 

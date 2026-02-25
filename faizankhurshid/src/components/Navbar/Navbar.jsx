@@ -1,13 +1,9 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import './Navbar.css';
 import { FiMenu, FiX } from 'react-icons/fi';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-
-  const [menu, setMenu] = useState('home');
-  const menuRef = useRef();
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const closeMenu = () => setMenuOpen(false);
@@ -15,8 +11,17 @@ const Navbar = () => {
   const handleScrollTo = (id) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      closeMenu(); // Close mobile menu after click
+      const offset = 80; // Navbar height
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+      closeMenu();
     }
   };
 
@@ -24,6 +29,9 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-container">
 
+        <div className="logo cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+          <span className="logo-icon">&lt;/&gt;</span> <span className="logo-text">Faizan</span>
+        </div>
 
         {/* Nav Links */}
         <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
@@ -32,19 +40,15 @@ const Navbar = () => {
             <FiX />
           </li>
 
-          <li><a href="#home" onClick={()=>handleScrollTo('home')}>Home</a></li>
-          <li><a href="#about" onClick={()=>handleScrollTo('about')}>About</a></li>
-          <li><AnchorLink href="#skills" onClick={()=>handleScrollTo('skills')}>Skills</AnchorLink></li>
-          <li><a href="#projects" onClick={()=>handleScrollTo('projects')}>Projects</a></li>
-          <li><a href="#contact" onClick={()=>handleScrollTo('contact')}>Contact</a></li>
+          <li><a href="#about" onClick={closeMenu}>About</a></li>
+          <li><a href="#experience" onClick={closeMenu}>Experience</a></li>
+          <li><a href="#projects" onClick={closeMenu}>Projects</a></li>
+          <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
         </ul>
-
-        {/* Desktop Button */}
-        <button className="contact-button" onClick={()=>handleScrollTo('contact')}>Contact with me</button>
 
         {/* Mobile Menu Icon */}
         <div className="menu-icon" onClick={toggleMenu}>
-          <FiMenu />
+          <FiMenu color="#111827" />
         </div>
       </div>
     </nav>
